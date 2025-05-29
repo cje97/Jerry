@@ -1,0 +1,15 @@
+##fileformat=VCFv4.2
+##fileDate=20231027
+##source=SyntheticVCFGenerator
+##reference=GRCh38
+##INFO=<ID=DP,Number=1,Type=Integer,Description="Total Depth">
+##INFO=<ID=AF,Number=A,Type=Float,Description="Allele Frequency">
+##FILTER=<ID=q10,Description="Quality below 10">
+##FORMAT=<ID=GT,Number=1,Type=String,Description="Genotype">
+##FORMAT=<ID=GQ,Number=1,Type=Integer,Description="Genotype Quality">
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	SAMPLE1
+chr1	1000	rs123	G	A	100	PASS	DP=20;AF=0.5	GT:GQ	0/1:99
+chr1	2000	.	C	T	5	q10	DP=10;AF=0.1	GT:GQ	0/1:10
+chr2	3000	rs456	T	A,G	150	PASS	DP=30;AF=0.3,0.2	GT:GQ	1/2:90
+chrX	4000	.	A	<DEL>	200	PASS	DP=25	GT	0/1:80
+chrY	5000	.	C	G	80	PASS	DP=15;AF=1.0	GT:GQ	1/1:70
