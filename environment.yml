@@ -1,0 +1,22 @@
+name: deepQC
+channels:
+  - bioconda
+  - conda-forge
+  - defaults
+dependencies:
+  # Bioinformatics tools
+  - quast
+  - busco # BUSCO version 5 is recommended, ensure conda provides this or specify version if needed.
+  - kraken2
+  - prokka
+  - roary
+  - progressivemauve # Package for ProgressiveMauve
+  # Python libraries
+  - python=3.9
+  - pandas
+  - plotly
+  - jinja2
+  - click # For command-line interfaces, if preferred over argparse for some scripts
+  # Utilities
+  - snakemake      # Optional: for workflow management, especially in HPC environments
+  - parallel       # Optional: GNU Parallel for parallelizing tasks if not handled by individual tools
